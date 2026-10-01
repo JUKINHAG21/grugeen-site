@@ -1,0 +1,1315 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%231D683C' d='M25 122A107 107 0 0 0 132 15H468V92H100V495H25Z'/%3E%3Cpath fill='%231D683C' d='M229 218H380A107 107 0 0 0 487 325V495H410V296H229Z'/%3E%3C/svg%3E">
+<meta property="og:title" content="Grugeen · Energia sob Medida">
+<meta property="og:description" content="Gestão independente de energia e Mercado Livre de Energia. Reduza até 40% dos custos de energia, sem investimento.">
+<meta property="og:image" content="media/vsl-poster.jpg">
+<style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Grugeen · Energia sob Medida</title>
+<meta name="description" content="Gestão independente de energia e Mercado Livre de Energia. Reduza até 40% dos custos de energia da sua empresa, sem investimento.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Sans:wght@400..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: uma rede elétrica que reage ao cursor no topo; depois seções em trilho editorial de 12 colunas.
+   Motivo gráfico: o "canto mordido" em quarto de círculo do monograma Grugeen, aplicado a botões e cartões. */
+/* Paleta Grugeen: branco como base, verde da marca nos destaques, blocos em verde para ritmo.
+   Blocos escuros usam a classe .on-dark, que troca os tokens de texto e destaque. */
+:root{
+  --paper:#FFFFFF; --paper-2:#F0F5F1; --card:#FFFFFF;
+  --ink:#12241A; --ink-soft:#4E6356; --line:#D8E3DB;
+  --leaf:#1D683C; --sage:#7D9D7F;
+  --green:#1D683C; --hero:#0E3522; --hero-2:#154A2F; --on-green-soft:#CFE0D3;
+  --glow:#74CF8F; --glow-ink:#0B2A18; --on-dark:#FFFFFF; --on-dark-soft:#B9D0C0; --dark-line:rgba(255,255,255,.14);
+  --sun:#1D683C; --sun-ink:#FFFFFF; --on-hero:#12241A; --on-hero-soft:#4E6356; --hero-line:#D8E3DB;
+  --ok:#1D683C;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --bite:28px; --gutter:clamp(16px,4vw,56px); --maxw:1240px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0B1510; --paper-2:#11201A; --card:#0F1C16;
+    --ink:#E9F1EC; --ink-soft:#A3B8AA; --line:#22352A;
+    --leaf:#6FC48C; --sage:#8FB293;
+    --green:#164F2E; --hero:#07190F; --hero-2:#0F2B1C; --on-green-soft:#C3D7C8;
+    --on-dark-soft:#A7BFAF; --dark-line:rgba(255,255,255,.10);
+    --sun:#6FC48C; --sun-ink:#0B1510; --on-hero:#E9F1EC; --on-hero-soft:#A3B8AA; --hero-line:#22352A;
+    --ok:#6FC48C; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0B1510; --paper-2:#11201A; --card:#0F1C16;
+  --ink:#E9F1EC; --ink-soft:#A3B8AA; --line:#22352A;
+  --leaf:#6FC48C; --sage:#8FB293;
+  --green:#164F2E; --hero:#07190F; --hero-2:#0F2B1C; --on-green-soft:#C3D7C8;
+  --on-dark-soft:#A7BFAF; --dark-line:rgba(255,255,255,.10);
+  --sun:#6FC48C; --sun-ink:#0B1510; --on-hero:#E9F1EC; --on-hero-soft:#A3B8AA; --hero-line:#22352A;
+  --ok:#6FC48C; color-scheme:dark;
+}
+.on-dark{--on-hero:var(--on-dark);--on-hero-soft:var(--on-dark-soft);--hero-line:var(--dark-line);--sun:var(--glow);--sun-ink:var(--glow-ink);color:var(--on-hero)}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.02;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+:focus-visible{outline:2px solid var(--sun);outline-offset:3px}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:18px;height:18px;background:currentColor;clip-path:path("M0 0 H18 V18 A18 18 0 0 0 0 0 Z");transform:rotate(90deg)}
+.section{padding-block:clamp(72px,10vw,140px)}
+.h2{font-size:clamp(34px,5.2vw,68px);font-weight:800;font-variation-settings:"wdth" 88}
+.lede{font-size:clamp(17px,1.5vw,20px);color:var(--ink-soft);max-width:60ch}
+.mono{font-family:var(--f-mono)}
+.tab{font-variant-numeric:tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Botões com canto mordido ---------- */
+.btn{--bg:var(--sun);--fg:var(--sun-ink);display:inline-flex;align-items:center;gap:12px;padding:16px 26px;background:var(--bg);color:var(--fg);font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:0;border-radius:var(--bite) 4px 4px 4px;cursor:pointer;transition:border-radius .35s ease, background .2s;will-change:transform}
+.btn:hover{border-radius:4px 4px var(--bite) 4px}
+.btn svg{width:18px;height:18px;transition:transform .3s}
+.btn:hover svg{transform:translateX(4px)}
+.btn.ghost{--bg:transparent;--fg:var(--on-hero);box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--on-hero) 28%,transparent)}
+.btn.ghost:hover{--bg:color-mix(in srgb,var(--on-hero) 7%,transparent)}
+.btn.dark{--bg:var(--ink);--fg:var(--paper)}
+
+/* ---------- Barra de progresso + cursor ---------- */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--leaf);transform-origin:0 50%;transform:scaleX(0);z-index:60}
+.cursor-ring,.cursor-dot{position:fixed;left:0;top:0;pointer-events:none;z-index:70;border-radius:50%;opacity:0;transition:opacity .3s, width .25s, height .25s, background .25s, border-color .25s}
+.cursor-ring{width:38px;height:38px;margin:-19px 0 0 -19px;border:1.5px solid var(--leaf);mix-blend-mode:normal}
+.cursor-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:var(--leaf)}
+.cursor-ring.big{width:74px;height:74px;margin:-37px 0 0 -37px;background:color-mix(in srgb,var(--leaf) 12%,transparent)}
+.cursor-ring .lbl{position:absolute;inset:0;display:grid;place-items:center;font:600 10px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--leaf);opacity:0;transition:opacity .2s}
+.cursor-ring.big .lbl{opacity:1}
+@media (hover:hover) and (pointer:fine){ body.has-cursor .cursor-ring, body.has-cursor .cursor-dot{opacity:1} }
+
+/* ---------- Navegação ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s, box-shadow .3s}
+.nav-in{display:flex;align-items:center;gap:28px;height:76px}
+.nav.solid{background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--hero-line)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--on-hero)}
+.brand svg{width:34px;height:34px}
+.brand b{font-family:var(--f-display);font-size:22px;font-weight:800;font-variation-settings:"wdth" 110;letter-spacing:.01em}
+.menu{display:flex;gap:clamp(14px,1.8vw,26px);margin-left:auto;list-style:none;padding:0;margin-block:0}
+.menu a{white-space:nowrap;color:var(--on-hero-soft);text-decoration:none;font-size:15px;font-weight:500;position:relative;padding-block:6px;transition:color .2s}
+.menu a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--sun);transition:right .3s}
+.menu a:hover{color:var(--on-hero)}
+.menu a:hover::after{right:0}
+.nav .btn{padding:12px 18px;font-size:13px}
+.client-link{color:var(--on-hero-soft);font-size:14px;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
+.client-link:hover{color:var(--on-hero)}
+.client-link{white-space:nowrap}
+@media (max-width:1200px){.nav .client-link{display:none}}
+.burger{display:none;margin-left:auto;background:none;border:0;color:var(--on-hero);width:44px;height:44px;cursor:pointer}
+.mobile-panel{display:none}
+@media (max-width:1020px){
+  .menu,.nav .client-link,.nav .btn{display:none}
+  .burger{display:grid;place-items:center}
+  .mobile-panel{display:block;position:fixed;inset:0;top:calc(76px + env(safe-area-inset-top,0px));background:var(--paper);padding:24px var(--gutter);z-index:49;transform:translateY(-8px);opacity:0;pointer-events:none;transition:.3s}
+  .mobile-panel.open{opacity:1;transform:none;pointer-events:auto}
+  .mobile-panel a{display:block;color:var(--on-hero);text-decoration:none;font-family:var(--f-display);font-size:30px;font-weight:700;padding-block:10px;border-bottom:1px solid var(--hero-line)}
+  .mobile-panel .btn{margin-top:24px;font-size:15px;border-bottom:0}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:var(--paper);color:var(--ink);overflow:hidden;padding-top:calc(120px + env(safe-area-inset-top,0px));padding-bottom:0;isolation:isolate}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:140px;background:linear-gradient(to bottom,transparent,var(--paper));z-index:-1;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.95fr);gap:40px;align-items:center}
+.hero .eyebrow{color:var(--sun)}
+.h1{font-size:clamp(50px,7.6vw,116px);font-weight:800;line-height:.9;letter-spacing:-.025em;margin-top:22px;font-variation-settings:"wdth" 100,"wght" 800}
+.h1 .l1{display:block}
+.h1 .l2{display:block;color:var(--sun);font-style:italic;font-weight:500;white-space:nowrap}
+.h1 .ch{display:inline-block;font-variation-settings:"wdth" var(--w,92),"wght" var(--g,500);transition:font-variation-settings .18s ease-out}
+.hero-copy .lede{color:var(--on-hero-soft);margin-top:28px;max-width:52ch}
+.hero-copy .lede strong{color:var(--on-hero);font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.vsl{position:relative;display:grid;place-items:center;justify-self:end;width:100%;max-width:460px;aspect-ratio:4/5}
+.mark{position:absolute;inset:0}
+.mark svg{width:100%;height:100%;overflow:visible}
+.mark .pa,.mark .pb{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.mark .pa-in{fill:var(--leaf);animation:inA 1.3s cubic-bezier(.2,.8,.2,1) both .15s}
+.mark .pb-in{fill:var(--glow);animation:inB 1.3s cubic-bezier(.2,.8,.2,1) both .15s}
+@keyframes inA{from{transform:translate(-70px,-70px);opacity:0}}
+@keyframes inB{from{transform:translate(70px,70px);opacity:0}}
+.phone{position:relative;z-index:1;height:94%;max-width:100%;aspect-ratio:9/16;border-radius:34px;background:#0B1510;padding:8px;box-shadow:0 40px 80px -30px rgba(14,53,34,.6),0 0 0 1px rgba(14,53,34,.14);transform:perspective(1000px) rotateY(var(--ry,-8deg)) rotateX(var(--rx,4deg));transition:transform .4s ease-out}
+.phone video{width:100%;height:100%;object-fit:cover;border-radius:27px;display:block;background:#0B1510}
+.play{position:absolute;inset:8px;border:0;border-radius:27px;background:linear-gradient(to top,rgba(7,25,15,.85),rgba(7,25,15,0) 55%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:10px;padding:0 16px 30px;color:#fff;cursor:pointer;font:600 15px/1.25 var(--f-body);text-align:center}
+.play i{width:72px;height:72px;border-radius:50%;background:var(--glow);display:grid;place-items:center;animation:pulse 2.2s infinite}
+.play i svg{width:26px;height:26px;margin-left:4px;color:var(--glow-ink)}
+.play small{font:500 11px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(116,207,143,.55)}70%,100%{box-shadow:0 0 0 20px rgba(116,207,143,0)}}
+.vsl-tag{position:absolute;z-index:2;left:0;top:14%;background:var(--paper);border:1px solid var(--line);border-radius:4px 16px 4px 4px;padding:10px 14px;font:500 11.5px/1.35 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);box-shadow:0 12px 30px -16px rgba(14,53,34,.35)}
+.vsl-tag b{display:block;font-family:var(--f-display);font-size:20px;letter-spacing:0;text-transform:none;color:var(--leaf)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(56px,8vw,96px);border-top:1px solid var(--hero-line)}
+.stat{padding:28px 24px 36px 0;border-right:1px solid var(--hero-line)}
+.stat + .stat{padding-left:24px}
+.stat:last-child{border-right:0}
+.stat .n{font-family:var(--f-display);font-size:clamp(34px,4.4vw,58px);font-weight:800;font-variation-settings:"wdth" 80;line-height:1;font-variant-numeric:tabular-nums}
+.stat .n small{font-size:.5em;color:var(--sun);margin-left:2px}
+.stat p{font-size:14px;color:var(--on-hero-soft);margin-top:10px;max-width:24ch}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .vsl{justify-self:center;max-width:360px;margin-top:8px}
+  .vsl-tag{top:auto;bottom:10%}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(3){padding-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--hero-line)}
+}
+
+/* ---------- Marquee de clientes ---------- */
+.clients{background:var(--paper-2);color:var(--ink-soft);padding-block:28px 40px;overflow:hidden;border-top:1px solid var(--hero-line)}
+.clients .lbl{font:500 12px/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px}
+.track{display:flex;width:max-content;animation:marq 42s linear infinite}
+.clients:hover .track{animation-play-state:paused}
+.track span{font-family:var(--f-display);font-weight:700;font-size:clamp(22px,2.6vw,34px);font-variation-settings:"wdth" 118;text-transform:uppercase;padding-inline:28px;white-space:nowrap;display:inline-flex;align-items:center;gap:56px;transition:color .2s}
+.track span:hover{color:var(--leaf)}
+.track span::after{content:"";width:12px;height:12px;background:var(--sun);clip-path:path("M0 0 H12 V12 A12 12 0 0 0 0 0 Z")}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- Independência ---------- */
+.indep{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:start}
+.big-quote{font-family:var(--f-display);font-size:clamp(40px,6.4vw,92px);font-weight:800;line-height:.95;letter-spacing:-.02em;font-variation-settings:"wdth" 82}
+.big-quote em{font-style:italic;font-weight:400;color:var(--leaf)}
+.indep-list{display:grid;gap:0;margin-top:8px}
+.indep-item{display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;padding-block:24px;border-top:1px solid var(--line)}
+.indep-item:last-child{border-bottom:1px solid var(--line)}
+.indep-item svg{width:36px;height:36px;color:var(--leaf)}
+.indep-item h3{font-size:21px;font-weight:700;font-variation-settings:"wdth" 100}
+.indep-item p{color:var(--ink-soft);margin-top:6px;font-size:16px}
+.pull{margin-top:36px;padding:24px 26px;background:var(--paper-2);border-radius:0 var(--bite) 0 0;font-size:16px;color:var(--ink-soft)}
+.pull b{display:block;color:var(--ink);font-weight:600;margin-top:10px;font-size:14px}
+@media (max-width:860px){ .indep{grid-template-columns:1fr} }
+
+/* ---------- Serviços ---------- */
+.svc-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px;margin-bottom:48px}
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:4px var(--bite) 4px 4px;padding:30px;overflow:hidden;transform-style:preserve-3d;transition:transform .25s ease-out, border-color .25s;min-width:0}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--sun) 22%,transparent),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover{border-color:color-mix(in srgb,var(--sun) 60%,var(--line))}
+.card:hover::before{opacity:1}
+.card > *{position:relative}
+.card .ic{width:52px;height:52px;color:var(--leaf)}
+.card h3{font-size:clamp(24px,2.4vw,32px);font-weight:800;margin-top:26px;font-variation-settings:"wdth" 90}
+.card p{color:var(--ink-soft);margin-top:12px;font-size:16px}
+.card ul{margin:18px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.card li{font:500 12px/1 var(--f-mono);letter-spacing:.04em;padding:8px 10px;border:1px solid var(--line);border-radius:999px;color:var(--ink-soft)}
+.c1{grid-column:span 3}.c2{grid-column:span 3}.c3{grid-column:span 2}.c4{grid-column:span 2}.c5{grid-column:span 2}
+.card.feature{background:var(--green);color:var(--on-hero);border-color:transparent}
+.card.feature p{color:var(--on-green-soft)}
+.card.feature li{border-color:var(--hero-line);color:var(--on-green-soft);box-shadow:inset 0 0 0 1px rgba(234,241,236,.14);border:0}
+.card.feature .ic{color:var(--sun)}
+@media (max-width:980px){ .c1,.c2{grid-column:span 6}.c3,.c4,.c5{grid-column:span 6} }
+@media (min-width:600px) and (max-width:980px){ .c3,.c4{grid-column:span 3}.c5{grid-column:span 6} }
+
+/* ---------- Mercado Livre ---------- */
+.ml{background:var(--paper-2)}
+.ml-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,80px);align-items:center}
+.switch{display:inline-flex;padding:5px;background:var(--card);border:1px solid var(--line);border-radius:999px;margin-top:32px}
+.switch button{border:0;background:none;padding:11px 22px;border-radius:999px;font:600 14px/1 var(--f-body);color:var(--ink-soft);cursor:pointer;transition:.25s}
+.switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.ml-points{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:14px}
+.ml-points li{display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;font-size:16px;color:var(--ink-soft)}
+.ml-points li b{color:var(--ink);font-weight:600}
+.ml-points svg{width:20px;height:20px;margin-top:3px;color:var(--leaf)}
+.flow{background:var(--green);border-radius:4px var(--bite) 4px 4px;padding:clamp(20px,3vw,36px);color:var(--on-hero);min-width:0}
+.flow svg{width:100%;height:auto;display:block}
+.flow .cap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font:500 12px/1.4 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--on-hero-soft);margin-top:16px}
+.flow .dash{stroke-dasharray:6 8;animation:dash 1.2s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-28}}
+@media (max-width:900px){ .ml-grid{grid-template-columns:1fr} }
+
+/* ---------- Simulador ---------- */
+.sim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border:1px solid var(--line);border-radius:4px var(--bite) 4px 4px;overflow:hidden;background:var(--card);margin-top:48px}
+.sim-in{padding:clamp(24px,3.5vw,44px);display:grid;gap:30px;align-content:start}
+.sim-out{padding:clamp(24px,3.5vw,44px);background:var(--green);color:var(--on-hero);display:grid;gap:22px;align-content:start}
+.field-l{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-weight:600;font-size:15px}
+.field-l output{font-family:var(--f-display);font-size:30px;font-weight:800;font-variation-settings:"wdth" 80;font-variant-numeric:tabular-nums}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;margin-top:8px;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:3px;background:linear-gradient(to right,var(--sun) var(--p,30%),var(--line) var(--p,30%))}
+input[type=range]::-moz-range-track{height:6px;border-radius:3px;background:linear-gradient(to right,var(--sun) var(--p,30%),var(--line) var(--p,30%))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;margin-top:-10px;background:var(--ink);border:4px solid var(--sun);border-radius:50% 50% 50% 4px}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--ink);border:4px solid var(--sun);border-radius:50% 50% 50% 4px}
+.scale{display:flex;justify-content:space-between;font:500 12px/1 var(--f-mono);color:var(--ink-soft)}
+.seg{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.seg button{border:1px solid var(--line);background:none;padding:10px 14px;border-radius:4px 12px 4px 4px;font:500 14px/1 var(--f-body);color:var(--ink-soft);cursor:pointer;transition:.2s}
+.seg button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.sim-out .k{font:500 12px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--on-hero-soft)}
+.sim-out .v{font-family:var(--f-display);font-size:clamp(44px,5.6vw,76px);font-weight:800;font-variation-settings:"wdth" 78;line-height:1;color:var(--sun);font-variant-numeric:tabular-nums;margin-top:10px}
+.sim-out .sub{display:grid;grid-template-columns:1fr 1fr;gap:16px;border-top:1px solid var(--hero-line);padding-top:20px}
+.sim-out .sub b{display:block;font-family:var(--f-display);font-size:26px;font-weight:700;font-variation-settings:"wdth" 85;font-variant-numeric:tabular-nums;margin-top:6px}
+.bars{display:grid;gap:10px}
+.bar{display:grid;grid-template-columns:70px minmax(0,1fr) auto;gap:12px;align-items:center;font:500 12px/1 var(--f-mono);color:var(--on-hero-soft)}
+.bar i{display:block;height:14px;border-radius:2px 8px 2px 2px;background:var(--on-hero-soft);transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.bar.l i{background:var(--sun)}
+.verdict{font-size:15px;color:var(--on-hero-soft);padding:16px 18px;border-radius:0 16px 0 0;background:var(--hero-2)}
+.verdict b{color:var(--on-hero)}
+.fine{font-size:13px;color:var(--on-hero-soft)}
+@media (max-width:900px){ .sim{grid-template-columns:1fr} }
+
+/* ---------- Processo ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:56px;position:relative}
+.step{padding:0 28px 0 0;position:relative}
+.step + .step{padding-left:28px;border-left:1px solid var(--line)}
+.step .num{font-family:var(--f-display);font-size:88px;font-weight:200;line-height:1;color:var(--leaf);font-variation-settings:"wdth" 70}
+.step h3{font-size:26px;font-weight:800;margin-top:14px;font-variation-settings:"wdth" 92}
+.step p{color:var(--ink-soft);margin-top:10px;font-size:16px}
+.shot{margin:0 0 22px;aspect-ratio:4/3;max-width:100%;border-radius:4px 22px 4px 4px;overflow:hidden;background:#0B1510;box-shadow:0 24px 40px -28px rgba(14,53,34,.55)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.step:hover .shot img{transform:scale(1.04)}
+.wire{height:3px;background:var(--line);margin-top:48px;position:relative;overflow:hidden;border-radius:2px}
+.wire i{position:absolute;inset:0;background:var(--sun);transform-origin:0 50%;transform:scaleX(var(--wire,1))}
+@media (max-width:820px){ .steps{grid-template-columns:1fr;gap:36px}.step + .step{padding-left:0;border-left:0;border-top:1px solid var(--line);padding-top:28px} }
+
+/* ---------- História ---------- */
+.hist{background:var(--green);color:var(--on-hero);overflow:hidden}
+.hist .eyebrow{color:var(--on-green-soft)}
+.hist .lede{color:var(--on-green-soft)}
+.hist .icon-btn:hover{background:var(--on-hero);color:var(--green);border-color:var(--on-hero)}
+.hist .tl-item p{color:var(--on-green-soft)}
+.hist .tl-item .yr{-webkit-text-stroke-color:var(--on-green-soft)}
+.hist .tl-item:hover .yr{color:var(--on-hero);-webkit-text-stroke-color:var(--on-hero)}
+.hist .tl-item .dot::before{background:var(--on-hero);box-shadow:0 0 0 6px rgba(236,237,234,.14)}
+.hist .tl{scrollbar-color:var(--on-green-soft) transparent}
+.hist-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px}
+.tl-ctrl{display:flex;gap:10px}
+.icon-btn{width:52px;height:52px;display:grid;place-items:center;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);background:none;color:var(--on-hero);cursor:pointer;transition:.2s}
+.icon-btn:hover{background:var(--sun);color:var(--sun-ink);border-color:var(--sun)}
+.icon-btn svg{width:20px;height:20px}
+.tl{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x proximity;margin-top:48px;padding-bottom:20px;cursor:grab;scrollbar-width:thin;scrollbar-color:var(--sun) transparent;-webkit-overflow-scrolling:touch}
+.tl.drag{cursor:grabbing;scroll-snap-type:none;user-select:none}
+.tl-item{flex:0 0 clamp(260px,30vw,340px);scroll-snap-align:start;padding:0 28px 0 0;position:relative}
+.tl-item .yr{font-family:var(--f-display);font-size:clamp(56px,6vw,84px);font-weight:800;font-variation-settings:"wdth" 70;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--on-hero-soft);transition:color .3s,-webkit-text-stroke-color .3s}
+.tl-item:hover .yr{color:var(--sun);-webkit-text-stroke-color:var(--sun)}
+.tl-item .dot{display:flex;align-items:center;margin-block:22px}
+.tl-item .dot::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--sun);flex:none;box-shadow:0 0 0 6px rgba(116,207,143,.15)}
+.tl-item .dot::after{content:"";height:1px;flex:1;background:var(--hero-line);box-shadow:0 0 0 .5px rgba(234,241,236,.14)}
+.tl-item h3{font-size:21px;font-weight:700;font-variation-settings:"wdth" 96;padding-right:12px}
+.tl-item p{color:var(--on-hero-soft);font-size:15px;margin-top:10px;padding-right:12px}
+
+/* ---------- GSM ---------- */
+.gsm{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,5vw,80px);align-items:center}
+.device{background:var(--hero);border-radius:6px var(--bite) 6px 6px;padding:14px;box-shadow:0 30px 60px -30px rgba(12,36,39,.5);transform:perspective(1200px) rotateY(var(--ry,-6deg)) rotateX(var(--rx,3deg));transition:transform .4s ease-out;min-width:0}
+.dash-ui{border-radius:4px 18px 4px 4px;overflow:hidden;background:#0B1510}
+.dash-ui img{display:block;width:100%;height:auto}
+.device figcaption{font:500 11px/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--on-dark-soft);padding:12px 4px 2px;display:flex;justify-content:space-between;gap:8px}
+.dash-top{display:flex;justify-content:space-between;align-items:center;font:500 12px/1 var(--f-mono);color:var(--on-hero-soft);letter-spacing:.06em}
+.dash-top b{font-family:var(--f-display);font-size:16px;letter-spacing:0;color:var(--on-hero);font-weight:700}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.kpi{background:var(--hero);border-radius:4px 12px 4px 4px;padding:12px}
+.kpi span{font:500 10.5px/1.2 var(--f-mono);color:var(--on-hero-soft);letter-spacing:.06em;text-transform:uppercase}
+.kpi b{display:block;font-family:var(--f-display);font-size:22px;font-weight:700;font-variation-settings:"wdth" 85;margin-top:6px;font-variant-numeric:tabular-nums}
+.kpi em{font-style:normal;font:500 11px/1 var(--f-mono);color:var(--sun)}
+.chart{background:var(--hero);border-radius:4px;padding:12px}
+.chart svg{width:100%;height:auto;display:block}
+.demo-tag{font:500 10.5px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--on-hero-soft);text-align:right}
+.feat{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:18px 24px}
+.feat li{border-top:1px solid var(--line);padding-top:14px;font-size:15.5px;color:var(--ink-soft)}
+.feat li b{display:block;color:var(--ink);font-family:var(--f-display);font-weight:700;font-size:18px;font-variation-settings:"wdth" 95;margin-bottom:4px}
+@media (max-width:900px){ .gsm{grid-template-columns:1fr} .device{--ry:0deg;--rx:0deg} }
+@media (max-width:480px){ .feat{grid-template-columns:1fr} .kpis{grid-template-columns:1fr 1fr} .kpi:last-child{grid-column:span 2} }
+
+/* ---------- Depoimentos ---------- */
+.testi{background:var(--paper-2)}
+.t-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(32px,5vw,80px);margin-top:48px;align-items:start}
+.t-tabs{display:grid;gap:0;border-top:1px solid var(--line)}
+.t-tabs button{all:unset;cursor:pointer;display:grid;gap:2px;padding:16px 0 16px 18px;border-bottom:1px solid var(--line);position:relative;transition:padding .25s}
+.t-tabs button::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;background:var(--sun);transform:scaleY(0);transition:transform .25s}
+.t-tabs button[aria-selected="true"]::before{transform:none}
+.t-tabs button[aria-selected="true"]{padding-left:26px}
+.t-tabs button:focus-visible{outline:2px solid var(--sun)}
+.t-tabs b{font-family:var(--f-display);font-weight:700;font-size:18px;font-variation-settings:"wdth" 95}
+.t-tabs span{font-size:13.5px;color:var(--ink-soft)}
+.t-quote{position:relative;min-height:320px}
+.t-quote blockquote{margin:0;font-family:var(--f-display);font-weight:400;font-size:clamp(24px,2.7vw,36px);line-height:1.22;letter-spacing:-.01em;font-variation-settings:"wdth" 88;text-wrap:pretty}
+.t-quote blockquote::before{content:"“";display:block;font-size:120px;line-height:.6;color:var(--sun);font-weight:800;margin-bottom:10px}
+.t-quote figcaption{margin-top:26px;display:flex;align-items:center;gap:14px;font-size:15px;color:var(--ink-soft)}
+.t-quote figcaption b{color:var(--ink);font-weight:600}
+.avatar{width:48px;height:48px;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--f-display);font-weight:800;font-size:16px;border-radius:50% 50% 50% 4px;flex:none}
+.t-fade{animation:tfade .45s ease both}
+@keyframes tfade{from{opacity:0;transform:translateY(12px)}}
+@media (max-width:860px){ .t-grid{grid-template-columns:1fr}.t-quote{min-height:0} }
+
+/* ---------- Equipe ---------- */
+.team{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:48px}
+.person{flex:0 0 calc((100% - 64px) / 5);background:var(--card);border:1px solid var(--line);border-radius:4px var(--bite) 4px 4px;padding:14px 14px 20px;display:grid;grid-template-rows:auto 1fr;gap:14px;align-content:start;min-width:0;position:relative;overflow:hidden;transition:border-color .3s}
+.person:hover{border-color:var(--leaf)}
+.person .ph{aspect-ratio:1;max-width:100%;border-radius:4px 64px 4px 4px;background:var(--green);position:relative;overflow:hidden}
+.person .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;transform:scale(1.02);transition:transform .6s cubic-bezier(.2,.8,.2,1), filter .4s;filter:saturate(.92)}
+.person:hover .ph img{transform:scale(1.08);filter:saturate(1.05)}
+.person .ph::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(to top,rgba(14,53,34,.55),transparent);opacity:0;transition:opacity .4s}
+.person:hover .ph::after{opacity:1}
+.person .txt{display:grid;gap:6px;padding-inline:6px;align-content:start}
+.person h3{font-size:18px;font-weight:700;font-variation-settings:"wdth" 92;line-height:1.15}
+.person .role{font:500 11.5px/1.4 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--leaf)}
+.person p{font-size:14px;color:var(--ink-soft)}
+@media (max-width:1100px){ .person{flex-basis:calc((100% - 32px) / 3)} }
+@media (max-width:640px){ .person{flex-basis:calc((100% - 16px) / 2)} .person p{display:none} }
+
+/* ---------- FAQ ---------- */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,5vw,80px)}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding-block:22px;font-family:var(--f-display);font-size:clamp(19px,1.8vw,23px);font-weight:700;font-variation-settings:"wdth" 92}
+summary::-webkit-details-marker{display:none}
+summary .pm{width:34px;height:34px;flex:none;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line);transition:.3s}
+summary .pm svg{width:14px;height:14px;transition:transform .3s}
+details[open] summary .pm{background:var(--sun);border-color:var(--sun);color:var(--sun-ink)}
+details[open] summary .pm svg{transform:rotate(45deg)}
+details .ans{padding-bottom:24px;color:var(--ink-soft);max-width:62ch;display:grid;gap:10px}
+details .ans ul{margin:0;padding-left:20px}
+@media (max-width:860px){ .faq-grid{grid-template-columns:1fr} }
+
+/* ---------- Notícias ---------- */
+.news{background:var(--paper-2)}
+.news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:48px}
+.post{display:grid;grid-template-rows:auto auto 1fr auto;gap:16px;overflow:hidden;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:4px var(--bite) 4px 4px;padding:26px;transition:transform .3s, border-color .3s;min-width:0}
+.post:hover{transform:translateY(-4px);border-color:var(--sun)}
+.post .thumb{margin:-26px -26px 0;aspect-ratio:16/9;overflow:hidden;background:var(--paper-2)}
+.post .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.post:hover .thumb img{transform:scale(1.05)}
+.post .meta{display:flex;justify-content:space-between;font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)}
+.post .meta time{color:var(--ink-soft)}
+.post h3{font-size:22px;font-weight:700;font-variation-settings:"wdth" 92;line-height:1.15}
+.post .more{font-weight:600;font-size:14px;display:inline-flex;gap:8px;align-items:center}
+.post .more svg{width:16px;height:16px;transition:transform .3s}
+.post:hover .more svg{transform:translate(3px,-3px)}
+.newsletter{margin-top:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:24px;align-items:center;padding:28px 30px;background:var(--green);color:var(--on-hero);border-radius:4px var(--bite) 4px 4px}
+.newsletter h3{font-size:clamp(22px,2.4vw,30px);font-weight:800;font-variation-settings:"wdth" 90}
+.newsletter p{color:var(--on-hero-soft);font-size:15px;margin-top:6px}
+.nl-form{display:flex;gap:10px;flex-wrap:wrap}
+.nl-form input{flex:1 1 220px;min-width:0;padding:16px 18px;border-radius:4px;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:var(--on-hero);font:inherit;font-size:16px}
+.nl-form input::placeholder{color:var(--on-hero-soft)}
+.nl-msg{font-size:14px;color:var(--sun);flex-basis:100%}
+@media (max-width:900px){ .news-grid{grid-template-columns:1fr} .newsletter{grid-template-columns:1fr} }
+
+/* ---------- Contato ---------- */
+.contact{background:var(--paper);color:var(--ink);position:relative;overflow:hidden}
+.contact .eyebrow{color:var(--sun)}
+.contact .lede{color:var(--on-hero-soft)}
+.c-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,80px);align-items:start}
+.c-big{font-family:var(--f-display);font-size:clamp(44px,7vw,104px);font-weight:800;line-height:.92;letter-spacing:-.02em;font-variation-settings:"wdth" 80}
+.c-big em{color:var(--sun);font-style:italic;font-weight:400}
+.c-info{margin-top:40px;display:grid;gap:0}
+.c-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;padding-block:18px;border-top:1px solid var(--hero-line);}
+.c-row .k{font:500 12px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--on-hero-soft);width:100%}
+.c-row .v{font-size:19px;font-weight:500;user-select:all}
+.copy{background:none;border:1.5px solid var(--line);color:var(--on-hero-soft);border-radius:999px;padding:7px 14px;font:500 12px/1 var(--f-mono);letter-spacing:.06em;cursor:pointer;transition:.2s}
+.copy:hover{color:var(--sun-ink);background:var(--sun);border-color:var(--sun)}
+.form{background:var(--paper-2);color:var(--ink);border-radius:4px var(--bite) 4px 4px;padding:clamp(22px,3vw,40px);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form h3{grid-column:1/-1;font-size:26px;font-weight:800;font-variation-settings:"wdth" 90}
+.form .note{grid-column:1/-1;font-size:14px;color:var(--ink-soft);margin-top:-6px}
+.fld{display:grid;gap:6px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld label,.fld .lb{font-size:13px;font-weight:600;color:var(--ink-soft)}
+.fld input,.fld select{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:4px;background:var(--card);color:var(--ink);font:inherit;font-size:16px;transition:border-color .2s}
+.fld input:focus,.fld select:focus{border-color:var(--leaf);outline:none}
+.fld input[type=file]{padding:10px;font-size:14px}
+.radios{display:flex;gap:10px}
+.radios label{flex:1;display:flex;align-items:center;gap:8px;padding:12px 14px;border:1.5px solid var(--line);border-radius:4px;cursor:pointer;font-weight:500;color:var(--ink);font-size:15px}
+.radios input{accent-color:var(--leaf)}
+.form .btn{grid-column:1/-1;justify-content:center}
+.form-ok{grid-column:1/-1;padding:14px 16px;background:var(--paper-2);border-radius:0 16px 0 0;font-size:15px}
+@media (max-width:900px){ .c-grid{grid-template-columns:1fr} }
+@media (max-width:520px){ .form{grid-template-columns:1fr} }
+
+/* ---------- Rodapé ---------- */
+footer{background:var(--hero);color:var(--on-hero-soft);padding-block:48px calc(40px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--hero-line);font-size:14.5px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer h4{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-hero);font-weight:500;margin-bottom:14px}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+footer a{text-decoration:none;color:var(--on-hero-soft)}
+footer a:hover{color:var(--sun)}
+.f-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid var(--hero-line);font-size:13px}
+.giant{font-family:var(--f-display);font-weight:800;font-size:clamp(70px,18vw,280px);line-height:.8;letter-spacing:-.04em;font-variation-settings:"wdth" 125;color:transparent;-webkit-text-stroke:1px rgba(234,241,236,.16);margin-top:40px;white-space:nowrap;overflow:hidden;user-select:none}
+@media (max-width:800px){ .f-grid{grid-template-columns:1fr 1fr} }
+
+/* WhatsApp flutuante */
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:10px;padding:14px 18px;background:var(--green);color:#fff;text-decoration:none;border-radius:var(--bite) var(--bite) 4px var(--bite);font-weight:600;font-size:14px;box-shadow:0 12px 30px -10px rgba(0,0,0,.4);transition:transform .25s}
+.wa:hover{transform:translateY(-3px)}
+.wa svg{width:22px;height:22px}
+@media (max-width:520px){ .wa span{display:none} .wa{padding:14px} }
+
+/* Revelação ligada à rolagem (só onde o navegador suporta; sem suporte, tudo aparece normalmente) */
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
+    @keyframes rv{from{opacity:.15;transform:translateY(36px)}}
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+
+<div class="progress" id="progress"></div>
+<div class="cursor-ring" id="ring"><span class="lbl" id="ringLbl">arraste</span></div>
+<div class="cursor-dot" id="dot"></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#topo" aria-label="Grugeen, início">
+      <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M25 122A107 107 0 0 0 132 15H468V92H100V495H25Z"/><path fill="var(--sun)" d="M229 218H380A107 107 0 0 0 487 325V495H410V296H229Z"/></svg>
+      <b>GRUGEEN</b>
+    </a>
+    <ul class="menu">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#mercado-livre">Mercado Livre</a></li>
+      <li><a href="#simulador">Simulador</a></li>
+      <li><a href="#historia">Quem somos</a></li>
+      <li><a href="#conteudos">Conteúdos</a></li>
+      <li><a href="#duvidas">Dúvidas</a></li>
+    </ul>
+    <a class="client-link" href="https://grugeen.eng.br/area-do-cliente/" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Área do cliente</a>
+    <a class="btn magnetic" href="#contato">Análise gratuita</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mpanel">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M9 17h12"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="mobile-panel" id="mpanel" aria-label="Menu">
+  <a href="#servicos">Serviços</a><a href="#mercado-livre">Mercado Livre</a><a href="#simulador">Simulador</a><a href="#historia">Quem somos</a><a href="#conteudos">Conteúdos</a><a href="#duvidas">Dúvidas</a>
+  <a href="https://grugeen.eng.br/area-do-cliente/" target="_blank" rel="noopener">Área do cliente ↗</a>
+  <a class="btn" href="#contato">Análise gratuita</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="topo">
+  <canvas id="grid" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Gestão independente de energia · desde 2005</span>
+        <h1 class="h1" id="h1" aria-label="Energia sob medida.">
+          <span class="l1" aria-hidden="true">Energia</span>
+          <span class="l2" aria-hidden="true" id="stretch">sob medida.</span>
+        </h1>
+        <p class="lede">Cuidamos da energia da sua empresa no Mercado Livre para que ela possa alçar voos mais altos. <strong>Reduza até 40% dos custos, sem investimento</strong>, com uma consultoria que não vende energia e trabalha só do seu lado.</p>
+        <div class="hero-cta">
+          <a class="btn magnetic" href="#simulador">Simular minha economia
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn ghost magnetic" href="#mercado-livre">Entender o Mercado Livre</a>
+        </div>
+      </div>
+      <div class="vsl" id="vsl">
+        <div class="mark" aria-hidden="true">
+          <svg viewBox="0 0 512 512">
+            <g class="pa" id="pa"><path class="pa-in" d="M25 122A107 107 0 0 0 132 15H468V92H100V495H25Z"/></g>
+            <g class="pb" id="pb"><path class="pb-in" d="M229 218H380A107 107 0 0 0 487 325V495H410V296H229Z"/></g>
+          </svg>
+        </div>
+        <div class="vsl-tag">Entenda em<b>2 min e meio</b></div>
+        <div class="phone" id="phone">
+          <video id="vslVideo" src="media/vsl.mp4" poster="media/vsl-poster.jpg" playsinline preload="none"></video>
+          <button class="play" id="vslPlay" type="button" aria-label="Assistir ao vídeo sobre o Grugeen">
+            <i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></i>
+            Como o Grugeen reduz sua conta de energia
+            <small>Assista · 2:33</small>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n tab"><span class="count" data-to="20">20</span><small>+</small></div><p>anos cuidando da energia de indústrias e empresas</p></div>
+      <div class="stat"><div class="n tab"><span class="count" data-to="100">100</span><small>+</small></div><p>unidades consumidoras sob gestão</p></div>
+      <div class="stat"><div class="n tab"><span class="count" data-to="1000" data-sep="1">1.000</span><small>+</small></div><p>alunos e ouvintes em cursos, palestras e treinamentos</p></div>
+      <div class="stat"><div class="n tab"><small style="margin:0 4px 0 0;color:var(--on-hero-soft)">até</small><span class="count" data-to="40">40</span><small>%</small></div><p>de redução no custo de energia, sem investimento</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLIENTES ================= -->
+<section class="clients" aria-label="Clientes">
+  <div class="wrap lbl">Empresas que confiam a energia ao Grugeen</div>
+  <div class="track" id="track">
+    <span>Vibra</span><span>Bemol</span><span>Grupo MK · Mondial</span><span>Rede Amazônica</span><span>Super Terminais</span><span>Giracor</span><span>Flex Industries</span><span>Irmãos Assini</span><span>MM da Amazônia</span><span>Innova</span>
+  </div>
+</section>
+
+<!-- ================= INDEPENDÊNCIA ================= -->
+<section class="section">
+  <div class="wrap indep">
+    <div class="rv">
+      <span class="eyebrow">Por que o Grugeen</span>
+      <p class="big-quote" style="margin-top:22px">Não vendemos energia. <em>Trabalhamos só para você.</em></p>
+      <div class="pull">
+        “A economia obtida junto ao Grugeen foi a maior que observamos, exatamente pelo ótimo serviço prestado sem conflito de interesses, por não venderem energia.”
+        <b>Ederson Girardi, sócio da Giracor Têxtil</b>
+      </div>
+    </div>
+    <div class="indep-list rv">
+      <div class="indep-item">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 30 12 22l6 5 9-12 9 6"/><path d="M4 36h32"/></svg>
+        <div><h3>Estratégia de contratação</h3><p>Negociamos com geradores e comercializadoras e acompanhamos o mercado para fixar preço no momento certo, com previsibilidade para os próximos anos.</p></div>
+      </div>
+      <div class="indep-item">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="4" width="24" height="32" rx="2"/><path d="M14 13h12M14 19h12M14 25h6"/><path d="m22 28 3 3 6-7"/></svg>
+        <div><h3>Auditoria de cada fatura</h3><p>Conferimos distribuição, energia e tributos. Quando o desconto da energia incentivada vem abaixo do contratado, cobramos o RETUSD e o dinheiro volta para a sua empresa.</p></div>
+      </div>
+      <div class="indep-item">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="20" cy="20" r="15"/><path d="M20 11v9l6 4"/></svg>
+        <div><h3>Resposta rápida, atendimento próximo</h3><p>Equipe técnica em Florianópolis e Manaus que conhece sua planta, acompanha demanda e energia reativa e cuida das tratativas com a distribuidora e a CCEE.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVIÇOS ================= -->
+<section class="section" id="servicos" style="padding-top:0">
+  <div class="wrap">
+    <div class="svc-head rv">
+      <div>
+        <span class="eyebrow">Serviços</span>
+        <h2 class="h2" style="margin-top:18px">Da fatura à usina,<br>tudo sob medida.</h2>
+      </div>
+      <p class="lede" style="max-width:42ch">Gestão independente que reduz custos de consumidores e maximiza o resultado de ativos de geração, com atenção aos detalhes técnicos, regulatórios e financeiros.</p>
+    </div>
+    <div class="bento">
+      <article class="card feature c1 tilt rv on-dark">
+        <svg class="ic" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 40c8 0 10-22 18-22s8 14 14 14 8-20 12-26"/><circle cx="48" cy="6" r="3" fill="currentColor"/><path d="M4 48h44"/></svg>
+        <h3>Estratégia no Mercado Livre</h3>
+        <p>Contratação e negociação de energia, acompanhamento de PLD e preços futuros, gestão de contratos e migração completa do mercado cativo para o livre.</p>
+        <ul><li>Contratação</li><li>Negociação</li><li>PLD</li><li>Swap</li><li>Migração</li></ul>
+      </article>
+      <article class="card c2 tilt rv">
+        <svg class="ic" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 38a20 20 0 1 1 36 0"/><path d="m26 32 9-12"/><circle cx="26" cy="32" r="3" fill="currentColor"/><path d="M12 24l3 2M40 24l-3 2M26 12v4"/></svg>
+        <h3>Eficiência energética</h3>
+        <p>Acompanhamento de demanda contratada, energia reativa e modalidade tarifária. Medição de equipamentos e de grandezas como temperatura, umidade, pressão e vazão.</p>
+        <ul><li>Demanda</li><li>Energia reativa</li><li>Medição</li></ul>
+      </article>
+      <article class="card c3 tilt rv">
+        <svg class="ic" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="10" y="4" width="28" height="40" rx="2"/><path d="M16 14h16M16 21h16M16 28h9"/><circle cx="37" cy="37" r="9"/><path d="m43.5 43.5 5 5"/></svg>
+        <h3>Consultorias</h3>
+        <p>Auditoria de contratos, faturas de distribuição e energia, tributos, pedidos de ressarcimento e análise fiscal.</p>
+      </article>
+      <article class="card c4 tilt rv">
+        <svg class="ic" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="16" cy="14" r="7"/><path d="M16 1v3M16 24v3M3 14h3M26 14h3M7 5l2 2M23 21l2 2M7 23l2-2M23 7l2-2"/><path d="M22 48 30 30h16l-6 18z"/><path d="M33 30l-2 18M40 30l-2 18M26 39h18"/></svg>
+        <h3>Projetos de geração</h3>
+        <p>Viabilidade técnica e financeira de solar e biomassa, para venda de energia ou autoprodução, com homologação e conexão na distribuição ou transmissão.</p>
+      </article>
+      <article class="card c5 tilt rv">
+        <svg class="ic" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 18 26 8l22 10-22 10z"/><path d="M12 22v12c0 4 6 8 14 8s14-4 14-8V22"/><path d="M48 18v14"/></svg>
+        <h3>Cursos e palestras</h3>
+        <p>Formação em Mercado Livre e autoprodução de energia: conexão ao SIN, estudos de viabilidade, faturamento e regulação.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MERCADO LIVRE ================= -->
+<section class="section ml" id="mercado-livre">
+  <div class="wrap ml-grid">
+    <div class="rv">
+      <span class="eyebrow">Mercado Livre de Energia</span>
+      <h2 class="h2" style="margin-top:18px">A mesma rede. Um fornecedor que você escolhe.</h2>
+      <p class="lede" style="margin-top:20px">Sua empresa continua ligada à distribuidora, que segue fazendo o transporte da energia. A diferença é quem gera e vende essa energia, e por quanto.</p>
+      <div class="switch" role="group" aria-label="Comparar mercados">
+        <button type="button" id="bCativo" aria-pressed="false">Mercado cativo</button>
+        <button type="button" id="bLivre" aria-pressed="true">Mercado livre</button>
+      </div>
+      <ul class="ml-points" id="mlPoints"></ul>
+    </div>
+    <div class="flow rv on-dark" aria-live="polite">
+      <svg viewBox="0 0 560 340" role="img" aria-labelledby="flowT">
+        <title id="flowT">Caminho da energia até a sua empresa</title>
+        <g font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1">
+          <!-- geradores -->
+          <g id="gens">
+            <g transform="translate(20,20)"><rect width="120" height="56" rx="4" fill="var(--hero-2)"/><text x="12" y="24" fill="var(--on-hero-soft)">GERADOR A</text><text x="12" y="42" fill="var(--on-hero)" font-size="13">Hidrelétrica</text></g>
+            <g transform="translate(20,96)" id="genB"><rect width="120" height="56" rx="4" fill="var(--hero-2)"/><text x="12" y="24" fill="var(--on-hero-soft)">GERADOR B</text><text x="12" y="42" fill="var(--on-hero)" font-size="13">Solar · Eólica</text></g>
+            <g transform="translate(20,172)" id="genC"><rect width="120" height="56" rx="4" fill="var(--hero-2)"/><text x="12" y="24" fill="var(--on-hero-soft)">GERADOR C</text><text x="12" y="42" fill="var(--on-hero)" font-size="13">Biomassa</text></g>
+          </g>
+          <!-- quem vende -->
+          <g transform="translate(206,82)"><rect width="148" height="84" rx="4" fill="none" stroke="var(--on-hero-soft)" stroke-opacity=".4"/><text x="14" y="26" fill="var(--on-hero-soft)">QUEM VENDE</text><text id="sellerTxt" x="14" y="50" fill="var(--sun)" font-size="15" font-weight="500">Comercializadora</text><text id="sellerSub" x="14" y="68" fill="var(--on-hero-soft)" font-size="10.5">preço negociado</text></g>
+          <!-- distribuidora -->
+          <g transform="translate(206,250)"><rect width="148" height="64" rx="4" fill="var(--hero-2)"/><text x="14" y="26" fill="var(--on-hero-soft)">DISTRIBUIDORA</text><text x="14" y="46" fill="var(--on-hero)" font-size="13">transporte (fio)</text></g>
+          <!-- empresa -->
+          <g transform="translate(416,138)"><path d="M0 4a4 4 0 0 1 4-4h100a20 20 0 0 1 20 20v84H4a4 4 0 0 1-4-4z" fill="var(--sun)"/><text x="12" y="30" fill="var(--sun-ink)">SUA</text><text x="12" y="46" fill="var(--sun-ink)">EMPRESA</text><text id="billTxt" x="12" y="84" fill="var(--sun-ink)" font-size="10.5">2 faturas</text></g>
+          <!-- linhas -->
+          <g fill="none" stroke-width="2">
+            <path id="lA" class="dash" d="M140 48H180V110H206" stroke="var(--sun)"/>
+            <path id="lB" class="dash" d="M140 124H206" stroke="var(--sun)"/>
+            <path id="lC" class="dash" d="M140 200H180V138H206" stroke="var(--sun)"/>
+            <path class="dash" d="M354 124H386V170H416" stroke="var(--sun)"/>
+            <path class="dash" d="M354 282H386V220H416" stroke="var(--on-hero-soft)"/>
+            <path d="M280 166V250" stroke="var(--on-hero-soft)" stroke-opacity=".35" stroke-dasharray="3 5"/>
+          </g>
+        </g>
+      </svg>
+      <div class="cap"><span id="capL">Você escolhe fornecedor, prazo e fonte</span><span id="capR">Sem bandeiras tarifárias</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SIMULADOR ================= -->
+<section class="section" id="simulador">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Simulador</span>
+      <h2 class="h2" style="margin-top:18px">Quanto sua empresa pode deixar de pagar?</h2>
+      <p class="lede" style="margin-top:18px">Arraste até o valor médio da sua conta de energia e diga como é o seu fornecimento. Em segundos você vê o potencial e por qual caminho sua empresa entra no Mercado Livre.</p>
+    </div>
+    <div class="sim rv">
+      <div class="sim-in">
+        <div>
+          <div class="field-l"><label for="bill">Conta média mensal</label><output id="billOut" class="tab">R$ 40.000</output></div>
+          <input type="range" id="bill" min="0" max="100" step="0.5" value="45" aria-describedby="billScale">
+          <div class="scale" id="billScale"><span>R$ 5 mil</span><span>R$ 500 mil</span></div>
+        </div>
+        <div>
+          <div class="lb" style="font-weight:600;font-size:15px">Sua empresa é atendida em alta tensão (Grupo A)?</div>
+          <div class="seg" id="segA" role="group" aria-label="Grupo A">
+            <button type="button" data-v="sim" aria-pressed="true">Sim</button>
+            <button type="button" data-v="nao" aria-pressed="false">Não</button>
+            <button type="button" data-v="ns" aria-pressed="false">Não sei</button>
+          </div>
+        </div>
+        <div>
+          <div class="lb" style="font-weight:600;font-size:15px">Demanda contratada (somando suas unidades)</div>
+          <div class="seg" id="segD" role="group" aria-label="Demanda contratada">
+            <button type="button" data-v="baixa" aria-pressed="true">Abaixo de 500 kW</button>
+            <button type="button" data-v="alta" aria-pressed="false">500 kW ou mais</button>
+          </div>
+        </div>
+        <div>
+          <div class="lb" style="font-weight:600;font-size:15px">Já está no Mercado Livre?</div>
+          <div class="seg" id="segM" role="group" aria-label="Já está no Mercado Livre">
+            <button type="button" data-v="nao" aria-pressed="true">Ainda não</button>
+            <button type="button" data-v="sim" aria-pressed="false">Sim, já migrei</button>
+          </div>
+        </div>
+      </div>
+      <div class="sim-out on-dark" aria-live="polite">
+        <div>
+          <div class="k">Potencial de economia por ano</div>
+          <div class="v" id="yearOut">até R$ 192.000</div>
+        </div>
+        <div class="bars" aria-hidden="true">
+          <div class="bar"><span>CATIVO</span><i id="barC" style="width:100%"></i><span id="barCv" class="tab">R$ 40 mil</span></div>
+          <div class="bar l"><span>LIVRE</span><i id="barL" style="width:60%"></i><span id="barLv" class="tab">R$ 24 mil</span></div>
+        </div>
+        <div class="sub">
+          <div><span class="k">Por mês</span><b id="monthOut">R$ 16.000</b></div>
+          <div><span class="k">Em 5 anos</span><b id="fiveOut">R$ 960.000</b></div>
+        </div>
+        <div class="verdict" id="verdict"></div>
+        <a class="btn magnetic" href="#contato" style="justify-self:start">Quero minha análise gratuita
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="fine">Estimativa ilustrativa, calculada sobre o teto de até 40% de redução. O resultado real depende da sua fatura, do seu perfil de consumo e dos preços de mercado. A análise inicial do Grugeen é gratuita para empresas com conta acima de R$ 5 mil por mês.</p>
+      </div>
+    </div>
+
+    <!-- Como funciona -->
+    <div style="margin-top:clamp(72px,9vw,120px)" class="rv">
+      <span class="eyebrow">Como funciona</span>
+      <h2 class="h2" style="margin-top:18px;font-size:clamp(30px,4vw,52px)">Três passos até a sua nova conta de energia.</h2>
+      <div class="wire" id="wire"><i></i></div>
+      <div class="steps">
+        <div class="step"><figure class="shot"><img src="media/ui-analise.jpg" alt="Tela de envio da fatura de energia para análise inicial" loading="lazy"></figure><div class="num">1</div><h3>Envie sua fatura</h3><p>Com os dados da conta, o Grugeen faz uma análise gratuita do potencial de economia da sua empresa. Seus dados ficam em sigilo.</p></div>
+        <div class="step"><figure class="shot"><img src="media/ui-fatura.jpg" alt="Fatura de energia analisada, com o valor total destacado" loading="lazy"></figure><div class="num">2</div><h3>Descubra sua economia</h3><p>Agendamos uma reunião para mostrar os ganhos com o Mercado Livre, o ajuste da demanda contratada e da modalidade tarifária.</p></div>
+        <div class="step"><figure class="shot"><img src="media/ui-cotacao.jpg" alt="Comparador de propostas de fornecedores do Mercado Livre" loading="lazy"></figure><div class="num">3</div><h3>Migre com segurança</h3><p>Cuidamos de todo o processo: aviso à distribuidora com 180 dias, adequação da medição, adesão à CCEE e contratação da energia.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HISTÓRIA ================= -->
+<section class="section hist on-dark" id="historia">
+  <div class="wrap">
+    <div class="hist-top rv">
+      <div>
+        <span class="eyebrow">Nossa história</span>
+        <h2 class="h2" style="margin-top:18px">Duas décadas cuidando<br>da energia de quem produz.</h2>
+        <p class="lede" style="margin-top:18px">Da consultoria do professor Amilton Coelho em 2005 a escritórios em Florianópolis e Manaus.</p>
+      </div>
+      <div class="tl-ctrl">
+        <button class="icon-btn" id="tlPrev" aria-label="Voltar na linha do tempo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        <button class="icon-btn" id="tlNext" aria-label="Avançar na linha do tempo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="tl" id="tl" tabindex="0" aria-label="Linha do tempo do Grugeen">
+      <div class="tl-item"><div class="yr">2005</div><div class="dot"></div><h3>O começo da consultoria</h3><p>O professor Amilton Coelho passa a ajudar empresas em qualidade de energia, eficiência energética e adequação tarifária.</p></div>
+      <div class="tl-item"><div class="yr">2006</div><div class="dot"></div><h3>Chegada a Manaus</h3><p>Resultados expressivos geram indicações de empresas do Polo Industrial de Manaus.</p></div>
+      <div class="tl-item"><div class="yr">2008</div><div class="dot"></div><h3>Nasce o Grugeen</h3><p>A Grugeen Consultoria Ltda. reúne engenheiros e consultores para reduzir custos e melhorar a qualidade de energia.</p></div>
+      <div class="tl-item"><div class="yr">2010</div><div class="dot"></div><h3>Mercado Livre</h3><p>Começa a gestão de consumidores livres e as primeiras migrações de clientes.</p></div>
+      <div class="tl-item"><div class="yr">2012</div><div class="dot"></div><h3>Consolidação</h3><p>O PROGEE e a gestão no Mercado Livre se consolidam, com mais de 50 clientes na carteira.</p></div>
+      <div class="tl-item"><div class="yr">2019</div><div class="dot"></div><h3>Dashboard energético</h3><p>Clientes passam a ver consumo e custo de energia de forma rápida, num só lugar.</p></div>
+      <div class="tl-item"><div class="yr">2020</div><div class="dot"></div><h3>UTE CGVE Innova</h3><p>Do estudo de viabilidade à autorização na Aneel e no ONS. O projeto foi destaque na COP 26.</p></div>
+      <div class="tl-item"><div class="yr">2022</div><div class="dot"></div><h3>Cursos pelo Brasil</h3><p>O conhecimento em Mercado Livre e autoprodução vira cursos, treinamentos e palestras.</p></div>
+      <div class="tl-item"><div class="yr">2023</div><div class="dot"></div><h3>Nova identidade</h3><p>O dashboard é renovado e passa a se chamar GSM, Gestão de Energia sob Medida.</p></div>
+      <div class="tl-item"><div class="yr">2024</div><div class="dot"></div><h3>Mercado varejista</h3><p>Com a abertura do varejo, empresas de menor porte passam a escolher seu fornecedor com o Grugeen.</p></div>
+      <div class="tl-item"><div class="yr">2025</div><div class="dot"></div><h3>Escritórios ampliados</h3><p>Time e escritórios crescem em Manaus e Florianópolis para atender uma base maior de clientes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GSM ================= -->
+<section class="section" id="gsm">
+  <div class="wrap gsm">
+    <div class="rv">
+      <span class="eyebrow">Plataforma GSM</span>
+      <h2 class="h2" style="margin-top:18px">Seu custo de energia, visto de perto.</h2>
+      <p class="lede" style="margin-top:18px">O Sistema de Gestão de Energia sob Medida reúne consumo, contratos, preços e previsão de custos da sua empresa. Planeje o consumo e saiba o impacto antes da fatura chegar.</p>
+      <ul class="feat">
+        <li><b>Consumo e custos</b>Dados de cada unidade, mês a mês.</li>
+        <li><b>Relatórios detalhados</b>Tudo o que a diretoria precisa ver.</li>
+        <li><b>Previsão de custos</b>Projeções com base no seu perfil.</li>
+        <li><b>Aproveitamento de contratos</b>Sobras e faltas antes de virar custo.</li>
+      </ul>
+      <a class="btn dark magnetic" style="margin-top:32px" href="https://grugeen.eng.br/area-do-cliente/" target="_blank" rel="noopener">Acessar a área do cliente
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+    </div>
+    <figure class="device rv on-dark" id="device" style="margin:0">
+      <div class="dash-ui"><img src="media/ui-projecao.jpg" alt="Painel de gestão de energia com projeção de custo e economia acumulada" loading="lazy"></div>
+      <figcaption><span>Painel GSM · projeção de custo</span><span>Economia acumulada</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= DEPOIMENTOS ================= -->
+<section class="section testi" id="depoimentos">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Depoimentos</span>
+      <h2 class="h2" style="margin-top:18px">Sua energia em boas mãos.</h2>
+    </div>
+    <div class="t-grid rv">
+      <div class="t-tabs" role="tablist" id="tTabs" aria-label="Clientes"></div>
+      <figure class="t-quote" id="tQuote" role="tabpanel"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EQUIPE ================= -->
+<section class="section" id="equipe">
+  <div class="wrap">
+    <div class="svc-head rv" style="margin-bottom:0">
+      <div>
+        <span class="eyebrow">Nossa equipe</span>
+        <h2 class="h2" style="margin-top:18px">Engenheiros, analistas e<br>gente que atende de perto.</h2>
+      </div>
+      <p class="lede" style="max-width:40ch">Um time que acompanha cada unidade, cada contrato e cada fatura, de Florianópolis a Manaus.</p>
+    </div>
+    <div class="team" id="team"></div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="duvidas" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="rv">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2 class="h2" style="margin-top:18px">O que as empresas mais perguntam.</h2>
+      <p class="lede" style="margin-top:18px">Não achou sua pergunta? Fale com a gente pelo WhatsApp ou pelo formulário no fim da página.</p>
+    </div>
+    <div class="rv" id="faq"></div>
+  </div>
+</section>
+
+<!-- ================= CONTEÚDOS ================= -->
+<section class="section news" id="conteudos">
+  <div class="wrap">
+    <div class="svc-head rv" style="margin-bottom:0">
+      <div>
+        <span class="eyebrow">Radar do setor</span>
+        <h2 class="h2" style="margin-top:18px">PLD, reservatórios e bandeiras, toda semana.</h2>
+      </div>
+      <a class="btn dark magnetic" href="https://grugeen.eng.br/conteudos/" target="_blank" rel="noopener">Todas as notícias
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+    </div>
+    <div class="news-grid">
+      <a class="post rv" href="https://grugeen.eng.br/2026/09/outubro-tera-bandeira-tarifaria-verde-e-encerra-cinco-meses-de-custo-extra-na-conta-de-energia/" target="_blank" rel="noopener">
+        <div class="thumb"><img src="https://grugeen.eng.br/wp-content/uploads/2026/09/bandeira-verde.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></div>
+        <div class="meta"><span>Notícias</span><time datetime="2026-09-29">29.09.2026</time></div>
+        <h3>Outubro terá bandeira tarifária verde e encerra cinco meses de custo extra na conta de energia</h3>
+        <span class="more">Ler notícia <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="post rv" href="https://grugeen.eng.br/2026/09/chuvas-de-setembro-impulsionam-o-sul-rumo-a-91-em-outubro-enquanto-nordeste-e-norte-seguem-em-queda/" target="_blank" rel="noopener">
+        <div class="thumb"><img src="https://grugeen.eng.br/wp-content/uploads/2026/09/1.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></div>
+        <div class="meta"><span>Notícias</span><time datetime="2026-09-29">29.09.2026</time></div>
+        <h3>Chuvas de setembro impulsionam o Sul rumo a 91% em outubro, enquanto Nordeste e Norte seguem em queda</h3>
+        <span class="more">Ler notícia <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="post rv" href="https://grugeen.eng.br/2026/09/grugeen-e-auren-reunem-empresas-em-brusque-para-debater-custos-e-cenarios-de-precos-de-energia/" target="_blank" rel="noopener">
+        <div class="thumb"><img src="https://grugeen.eng.br/wp-content/uploads/2026/09/DSC_8627.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></div>
+        <div class="meta"><span>Eventos</span><time datetime="2026-09-23">23.09.2026</time></div>
+        <h3>Grugeen e Auren reúnem empresas em Brusque para debater custos e cenários de preços de energia</h3>
+        <span class="more">Ler notícia <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+    </div>
+    <div class="newsletter rv on-dark">
+      <div><h3>Boletim Grugeen</h3><p>Receba o resumo do setor elétrico: PLD, níveis dos reservatórios, bandeiras e o que isso muda na sua conta.</p></div>
+      <form class="nl-form" id="nlForm" novalidate>
+        <label class="sr" for="nlEmail">Seu e-mail</label>
+        <input id="nlEmail" type="email" placeholder="seu@empresa.com.br" autocomplete="email" required>
+        <button class="btn" type="submit">Inscrever</button>
+        <div class="nl-msg" id="nlMsg" hidden></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTATO ================= -->
+<section class="section contact" id="contato">
+  <div class="wrap c-grid">
+    <div class="rv">
+      <span class="eyebrow">Análise gratuita</span>
+      <p class="c-big" style="margin-top:22px">Vamos medir sua energia <em>sob medida?</em></p>
+      <p class="lede" style="margin-top:22px">Se sua empresa gasta mais de R$ 5 mil por mês com energia, analisamos sua fatura sem custo e mostramos onde está a economia.</p>
+      <div class="c-info">
+        <div class="c-row"><span class="k">Telefone e WhatsApp</span><span class="v tab" id="vPhone">(48) 3112-2281</span><button class="copy" data-copy="vPhone">Copiar</button></div>
+        <div class="c-row"><span class="k">E-mail</span><span class="v" id="vMail">grugeen@grugeen.eng.br</span><button class="copy" data-copy="vMail">Copiar</button></div>
+        <div class="c-row"><span class="k">Florianópolis</span><span class="v" style="font-size:16px">Rua Bento Gonçalves, 183, sala 104 · Centro · 88010-080</span></div>
+        <div class="c-row"><span class="k">Manaus</span><span class="v" style="font-size:16px">Escritório regional · Amazonas</span></div>
+      </div>
+    </div>
+    <form class="form rv" id="leadForm" novalidate>
+      <h3>Solicite sua análise</h3>
+      <p class="note">Seus dados ficam em sigilo.</p>
+      <div class="fld"><label for="fNome">Nome</label><input id="fNome" required autocomplete="name"></div>
+      <div class="fld"><label for="fCargo">Cargo</label><input id="fCargo" autocomplete="organization-title"></div>
+      <div class="fld"><label for="fEmp">Empresa</label><input id="fEmp" required autocomplete="organization"></div>
+      <div class="fld"><label for="fDist">Distribuidora</label><input id="fDist" placeholder="Ex.: Celesc, Amazonas Energia"></div>
+      <div class="fld"><label for="fMail">E-mail</label><input id="fMail" type="email" required autocomplete="email"></div>
+      <div class="fld"><label for="fTel">Telefone</label><input id="fTel" type="tel" autocomplete="tel"></div>
+      <div class="fld full"><label for="fGasto">Gasto médio mensal</label>
+        <select id="fGasto"><option>Até R$ 10.000</option><option selected>R$ 10.000 a R$ 30.000</option><option>R$ 30.000 a R$ 60.000</option><option>R$ 60.000 a R$ 100.000</option><option>Mais de R$ 100.000</option></select></div>
+      <div class="fld full"><span class="lb">Já está no Mercado Livre de Energia?</span>
+        <div class="radios"><label><input type="radio" name="ml" id="fMlSim" value="sim"> Sim</label><label><input type="radio" name="ml" id="fMlNao" value="nao" checked> Não</label></div></div>
+      <div class="fld full"><label for="fFile">Fatura de energia (PDF ou imagem)</label><input id="fFile" type="file" accept=".pdf,image/*"></div>
+      <button class="btn" type="submit">Enviar para análise
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <div class="form-ok" id="formOk" hidden></div>
+    </form>
+  </div>
+</section>
+
+<footer class="on-dark">
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a class="brand" href="#topo" style="color:var(--on-hero)"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M25 122A107 107 0 0 0 132 15H468V92H100V495H25Z"/><path fill="var(--sun)" d="M229 218H380A107 107 0 0 0 487 325V495H410V296H229Z"/></svg><b>GRUGEEN</b></a>
+        <p style="margin-top:16px;max-width:34ch">Grupo de Gestão Eficiente de Energia. Juntos, construindo um futuro energético confiável.</p>
+      </div>
+      <div><h4>Navegar</h4><ul><li><a href="#servicos">Serviços</a></li><li><a href="#mercado-livre">Mercado Livre</a></li><li><a href="#simulador">Simulador</a></li><li><a href="#historia">Quem somos</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></div>
+      <div><h4>Aprenda</h4><ul><li><a href="https://grugeen.eng.br/swap/" target="_blank" rel="noopener">Swap de energia</a></li><li><a href="https://grugeen.eng.br/pld/" target="_blank" rel="noopener">PLD</a></li><li><a href="https://grugeen.eng.br/retusd/" target="_blank" rel="noopener">RETUSD</a></li><li><a href="https://grugeen.eng.br/desconto-de-energia-incentivada/" target="_blank" rel="noopener">Energia incentivada</a></li></ul></div>
+      <div><h4>Redes</h4><ul><li><a href="https://www.instagram.com/grugeen/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/company/grugeen---grupo-de-gest%C3%A3o-eficiente-de-energia/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://wa.me/554831122281" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://grugeen.eng.br/politica-de-privacidade/" target="_blank" rel="noopener">Política de privacidade</a></li></ul></div>
+    </div>
+    <div class="giant" aria-hidden="true">GRUGEEN</div>
+    <div class="f-bottom"><span>© 2026 Grugeen Consultoria Ltda. · CNPJ 10.388.102/0001-80</span><span>Florianópolis/SC · Manaus/AM</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/554831122281" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+  <span>Fale no WhatsApp</span>
+</a>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+  const $ = s => document.querySelector(s);
+  const $$ = s => [...document.querySelectorAll(s)];
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+  /* ---------- nav, progresso, menu móvel ---------- */
+  const nav = $('#nav'), prog = $('#progress');
+  const onScroll = () => {
+    nav.classList.toggle('solid', scrollY > 40);
+    const h = document.documentElement.scrollHeight - innerHeight;
+    prog.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`;
+    wireUpdate();
+  };
+  addEventListener('scroll', onScroll, {passive:true});
+  const burger = $('#burger'), panel = $('#mpanel');
+  burger.addEventListener('click', () => {
+    const o = panel.classList.toggle('open');
+    burger.setAttribute('aria-expanded', o);
+  });
+  $$('#mpanel a').forEach(a => a.addEventListener('click', () => { panel.classList.remove('open'); burger.setAttribute('aria-expanded', false); }));
+
+  /* ---------- cursor que segue o mouse ---------- */
+  const ring = $('#ring'), dot = $('#dot'), ringLbl = $('#ringLbl');
+  let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
+  if (fine) {
+    document.body.classList.add('has-cursor');
+    addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; dot.style.transform = `translate(${mx}px,${my}px)`; }, {passive:true});
+    const loopCursor = () => {
+      rx += (mx - rx) * .18; ry += (my - ry) * .18;
+      ring.style.transform = `translate(${rx}px,${ry}px)`;
+      requestAnimationFrame(loopCursor);
+    };
+    loopCursor();
+    document.addEventListener('pointerover', e => {
+      const t = e.target.closest('a,button,summary,input,select,label,.tl,.card');
+      ring.classList.toggle('big', !!t);
+      ringLbl.textContent = t && t.closest('.tl') ? 'arraste' : '';
+    });
+    document.addEventListener('pointerleave', () => { ring.style.opacity = 0; dot.style.opacity = 0; });
+    document.addEventListener('pointerenter', () => { ring.style.opacity = ''; dot.style.opacity = ''; });
+  }
+
+  /* ---------- botões magnéticos ---------- */
+  if (fine && !reduce) {
+    $$('.magnetic').forEach(b => {
+      b.addEventListener('pointermove', e => {
+        const r = b.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width / 2) * .25, y = (e.clientY - r.top - r.height / 2) * .35;
+        b.style.transform = `translate(${x}px,${y}px)`;
+      });
+      b.addEventListener('pointerleave', () => { b.style.transform = ''; });
+    });
+  }
+
+  /* ---------- hero: rede elétrica em canvas ---------- */
+  const cv = $('#grid'), hero = $('#topo'), ctx = cv.getContext('2d');
+  let W = 0, H = 0, DPR = 1, S = 48, hx = -999, hy = -999, inHero = false, t0 = performance.now();
+  const pulses = [];
+  const resize = () => {
+    DPR = Math.min(devicePixelRatio || 1, 2);
+    const r = hero.getBoundingClientRect(); W = r.width; H = r.height;
+    cv.width = W * DPR; cv.height = H * DPR; ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    S = W < 600 ? 36 : 48;
+  };
+  const gridPath = () => {
+    ctx.beginPath();
+    for (let x = 0; x <= W; x += S) { ctx.moveTo(x + .5, 0); ctx.lineTo(x + .5, H); }
+    for (let y = 0; y <= H; y += S) { ctx.moveTo(0, y + .5); ctx.lineTo(W, y + .5); }
+  };
+  const dirs = [[1,0],[-1,0],[0,1],[0,-1]];
+  const spawn = (x, y) => {
+    if (pulses.length > 70) return;
+    const d = dirs[Math.random() * 4 | 0];
+    pulses.push({gx: Math.round(x / S), gy: Math.round(y / S), dx: d[0], dy: d[1], d: 0, sp: 2.2 + Math.random() * 2.4, life: 10 + Math.random() * 14 | 0, trail: [], c: Math.random() < .35 ? 'sage' : 'leaf'});
+  };
+  hero.addEventListener('pointermove', e => {
+    const r = cv.getBoundingClientRect(); hx = e.clientX - r.left; hy = e.clientY - r.top; inHero = true;
+    if (Math.random() < .35) spawn(hx, hy);
+  }, {passive:true});
+  hero.addEventListener('pointerleave', () => { inHero = false; });
+  hero.addEventListener('pointerdown', e => {
+    const r = cv.getBoundingClientRect();
+    for (let i = 0; i < 10; i++) spawn(e.clientX - r.left, e.clientY - r.top);
+  });
+  let lastAmb = 0, C = {};
+  const rgb = n => { let h = css(n).replace('#', ''); if (h.length === 3) h = h.replace(/./g, c => c + c); const v = parseInt(h, 16) || 0; return `${v >> 16 & 255},${v >> 8 & 255},${v & 255}`; };
+  const readC = () => { C = {leaf: rgb('--leaf'), sage: rgb('--sage'), ink: rgb('--ink')}; };
+  readC(); matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', readC);
+  const draw = now => {
+    ctx.clearRect(0, 0, W, H);
+    // ponto de luz: cursor ou órbita lenta quando o mouse está fora
+    const t = (now - t0) / 1000;
+    const lx = inHero ? hx : W * (.62 + .22 * Math.cos(t * .35)), ly = inHero ? hy : H * (.42 + .22 * Math.sin(t * .5));
+    ctx.lineWidth = 1;
+    gridPath(); ctx.strokeStyle = `rgba(${C.ink},.06)`; ctx.stroke();
+    const g = ctx.createRadialGradient(lx, ly, 0, lx, ly, 260);
+    g.addColorStop(0, `rgba(${C.leaf},.45)`); g.addColorStop(.5, `rgba(${C.leaf},.12)`); g.addColorStop(1, `rgba(${C.leaf},0)`);
+    gridPath(); ctx.strokeStyle = g; ctx.stroke();
+    // subestações perto da luz
+    const c0 = Math.max(0, Math.floor((lx - 200) / S)), c1 = Math.ceil((lx + 200) / S), r0 = Math.max(0, Math.floor((ly - 200) / S)), r1 = Math.ceil((ly + 200) / S);
+    for (let i = c0; i <= c1; i++) for (let j = r0; j <= r1; j++) {
+      const x = i * S, y = j * S, dd = Math.hypot(x - lx, y - ly);
+      if (dd < 200) { const k = 1 - dd / 200, s = 1.5 + k * 4; ctx.fillStyle = `rgba(${C.leaf},${k * .8})`; ctx.fillRect(x - s / 2 + .5, y - s / 2 + .5, s, s); }
+    }
+    // pulsos de corrente
+    if (!inHero && now - lastAmb > 260) { spawn(lx, ly); lastAmb = now; }
+    ctx.lineCap = 'round';
+    for (let p = pulses.length - 1; p >= 0; p--) {
+      const q = pulses[p];
+      q.d += q.sp;
+      if (q.d >= S) {
+        q.d -= S; q.gx += q.dx; q.gy += q.dy; q.life--;
+        if (Math.random() < .32) { const d = dirs[Math.random() * 4 | 0]; if (d[0] !== -q.dx || d[1] !== -q.dy) { q.dx = d[0]; q.dy = d[1]; } }
+      }
+      const px = (q.gx + q.dx * q.d / S) * S, py = (q.gy + q.dy * q.d / S) * S;
+      q.trail.push([px, py]); if (q.trail.length > 16) q.trail.shift();
+      if (q.life <= 0 || px < -S || py < -S || px > W + S || py > H + S) { q.fade = (q.fade || 1) - .08; if (q.fade <= 0) { pulses.splice(p, 1); continue; } }
+      const a = q.fade ?? 1;
+      for (let k = 1; k < q.trail.length; k++) {
+        ctx.strokeStyle = `rgba(${C[q.c]},${(k / q.trail.length) * .9 * a})`;
+        ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.moveTo(q.trail[k - 1][0] + .5, q.trail[k - 1][1] + .5); ctx.lineTo(q.trail[k][0] + .5, q.trail[k][1] + .5); ctx.stroke();
+      }
+      ctx.fillStyle = `rgba(${C.leaf},${a})`; ctx.beginPath(); ctx.arc(px + .5, py + .5, 2.2, 0, 7); ctx.fill();
+    }
+    if (heroVisible) requestAnimationFrame(draw); else looping = false;
+  };
+  let heroVisible = true, looping = false;
+  resize();
+  new ResizeObserver(resize).observe(hero);
+  if (reduce) {
+    gridPath(); ctx.strokeStyle = `rgba(${C.ink},.06)`; ctx.stroke();
+  } else {
+    new IntersectionObserver(([en]) => {
+      heroVisible = en.isIntersecting;
+      if (heroVisible && !looping) { looping = true; requestAnimationFrame(draw); }
+    }).observe(hero);
+  }
+
+  /* ---------- monograma com paralaxe ---------- */
+  const pa = $('#pa'), pb = $('#pb');
+  if (fine && !reduce) {
+    addEventListener('pointermove', e => {
+      if (!heroVisible) return;
+      const nx = e.clientX / innerWidth - .5, ny = e.clientY / innerHeight - .5;
+      pa.style.transform = `translate(${-nx * 34}px,${-ny * 34}px)`;
+      pb.style.transform = `translate(${nx * 34}px,${ny * 34}px)`;
+    }, {passive:true});
+  }
+
+  /* ---------- título que "estica sob medida" perto do cursor ---------- */
+  const st = $('#stretch');
+  const txt = st.textContent; st.textContent = '';
+  const chars = [...txt].map(c => { const s = document.createElement('span'); s.className = 'ch'; s.textContent = c === ' ' ? ' ' : c; st.appendChild(s); return s; });
+  let centers = [];
+  const measure = () => { centers = chars.map(c => { const r = c.getBoundingClientRect(); return [r.left + r.width / 2 + scrollX, r.top + r.height / 2 + scrollY]; }); };
+  document.fonts?.ready.then(measure); addEventListener('resize', measure); measure();
+  if (fine && !reduce) {
+    addEventListener('pointermove', e => {
+      if (!heroVisible) return;
+      const x = e.clientX + scrollX, y = e.clientY + scrollY;
+      chars.forEach((c, i) => {
+        const d = Math.hypot(x - centers[i][0], y - centers[i][1]);
+        const k = Math.max(0, 1 - d / 320);
+        c.style.setProperty('--w', (92 + k * 33).toFixed(1));
+        c.style.setProperty('--g', (500 + k * 400).toFixed(0));
+      });
+    }, {passive:true});
+  }
+
+  /* ---------- contadores ---------- */
+  const fmt = n => n.toLocaleString('pt-BR');
+  const counters = $$('.count');
+  if (!reduce) {
+    const io = new IntersectionObserver(es => es.forEach(en => {
+      if (!en.isIntersecting) return; io.unobserve(en.target);
+      const el = en.target, to = +el.dataset.to, t0 = performance.now(), dur = 1400;
+      const step = n => { const p = Math.min(1, (n - t0) / dur), v = Math.round(to * (1 - Math.pow(1 - p, 3))); el.textContent = fmt(v); if (p < 1) requestAnimationFrame(step); };
+      requestAnimationFrame(step);
+    }), {threshold:.6});
+    counters.forEach(c => io.observe(c));
+  }
+
+  /* ---------- cartões com holofote e inclinação ---------- */
+  $$('.tilt').forEach(c => {
+    c.addEventListener('pointermove', e => {
+      const r = c.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+      c.style.setProperty('--mx', x + 'px'); c.style.setProperty('--my', y + 'px');
+      if (fine && !reduce) c.style.transform = `perspective(900px) rotateX(${(y / r.height - .5) * -6}deg) rotateY(${(x / r.width - .5) * 6}deg)`;
+    });
+    c.addEventListener('pointerleave', () => { c.style.transform = ''; });
+  });
+
+  /* ---------- vídeo de apresentação ---------- */
+  const vid = $('#vslVideo'), playBtn = $('#vslPlay'), phone = $('#phone');
+  playBtn.addEventListener('click', () => { vid.preload = 'auto'; vid.controls = true; playBtn.hidden = true; const p = vid.play(); p && p.catch(() => {}); });
+  vid.addEventListener('ended', () => { vid.controls = false; playBtn.hidden = false; });
+  if (fine && !reduce) {
+    const vw = $('#vsl');
+    vw.addEventListener('pointermove', e => { const r = vw.getBoundingClientRect(); phone.style.setProperty('--ry', ((e.clientX - r.left) / r.width - .5) * 14 + 'deg'); phone.style.setProperty('--rx', ((e.clientY - r.top) / r.height - .5) * -10 + 'deg'); });
+    vw.addEventListener('pointerleave', () => { phone.style.removeProperty('--ry'); phone.style.removeProperty('--rx'); });
+  }
+
+  /* ---------- painel GSM inclina com o mouse ---------- */
+  const dev = $('#device');
+  if (fine && !reduce) {
+    dev.addEventListener('pointermove', e => {
+      const r = dev.getBoundingClientRect();
+      dev.style.setProperty('--ry', ((e.clientX - r.left) / r.width - .5) * 10 + 'deg');
+      dev.style.setProperty('--rx', ((e.clientY - r.top) / r.height - .5) * -8 + 'deg');
+    });
+    dev.addEventListener('pointerleave', () => { dev.style.removeProperty('--ry'); dev.style.removeProperty('--rx'); });
+  }
+
+  /* ---------- Mercado cativo x livre ---------- */
+  const ML = {
+    livre: {pts: [
+      ['Preço negociado', 'com geradores e comercializadoras, com contratos que fixam o preço por anos.'],
+      ['Sem bandeiras tarifárias', 'e sem as surpresas do reajuste anual da distribuidora.'],
+      ['Você escolhe a fonte', 'e pode contratar energia renovável, com desconto de 50% ou 100% na TUSD.'],
+      ['Duas faturas', 'uma da distribuidora pelo transporte e outra do seu fornecedor de energia.']],
+      seller: 'Comercializadora', sub: 'preço negociado', bill: '2 faturas', capL: 'Você escolhe fornecedor, prazo e fonte', capR: 'Sem bandeiras tarifárias', gens: 1},
+    cativo: {pts: [
+      ['Tarifa regulada', 'definida para toda a área da distribuidora, sem negociação.'],
+      ['Bandeiras tarifárias', 'somam custo extra nos meses de geração mais cara.'],
+      ['Sem escolha de fonte', 'a energia vem do mix contratado pela distribuidora.'],
+      ['Uma fatura', 'energia e transporte cobrados juntos pela distribuidora.']],
+      seller: 'Distribuidora', sub: 'tarifa regulada', bill: '1 fatura', capL: 'Fornecedor definido pela sua região', capR: 'Sujeito a bandeiras e reajustes', gens: .25}
+  };
+  const check = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m4 10 4 4 8-9"/></svg>';
+  const setML = k => {
+    const m = ML[k];
+    $('#bLivre').setAttribute('aria-pressed', k === 'livre'); $('#bCativo').setAttribute('aria-pressed', k === 'cativo');
+    $('#mlPoints').innerHTML = m.pts.map(p => `<li>${check}<span><b>${p[0]}</b> ${p[1]}</span></li>`).join('');
+    $('#sellerTxt').textContent = m.seller; $('#sellerSub').textContent = m.sub; $('#billTxt').textContent = m.bill;
+    $('#capL').textContent = m.capL; $('#capR').textContent = m.capR;
+    ['#genB', '#genC', '#lA', '#lC'].forEach(s => $(s).style.opacity = m.gens);
+    $('#lA').style.transition = $('#lC').style.transition = 'opacity .4s';
+  };
+  $('#bLivre').onclick = () => setML('livre'); $('#bCativo').onclick = () => setML('cativo');
+  setML('livre');
+
+  /* ---------- Simulador ---------- */
+  const brl = n => n.toLocaleString('pt-BR', {style:'currency', currency:'BRL', maximumFractionDigits:0});
+  const short = n => n >= 1e6 ? 'R$ ' + (n / 1e6).toLocaleString('pt-BR', {maximumFractionDigits:1}) + ' mi' : 'R$ ' + Math.round(n / 1000).toLocaleString('pt-BR') + ' mil';
+  const sim = {a: 'sim', d: 'baixa', m: 'nao'};
+  const bill = $('#bill');
+  const seg = (id, key) => $$(id + ' button').forEach(b => b.addEventListener('click', () => {
+    $$(id + ' button').forEach(x => x.setAttribute('aria-pressed', x === b)); sim[key] = b.dataset.v; calc();
+  }));
+  seg('#segA', 'a'); seg('#segD', 'd'); seg('#segM', 'm');
+  function calc() {
+    const v = +bill.value;
+    const B = Math.round(5000 * Math.pow(100, v / 100) / 500) * 500;
+    bill.style.setProperty('--p', v + '%');
+    const rate = sim.m === 'sim' ? 0.15 : 0.40;
+    const mo = B * rate;
+    $('#billOut').textContent = brl(B);
+    $('#yearOut').textContent = 'até ' + brl(mo * 12);
+    $('#monthOut').textContent = brl(mo);
+    $('#fiveOut').textContent = brl(mo * 60);
+    $('#barCv').textContent = short(B); $('#barLv').textContent = short(B - mo);
+    $('#barL').style.width = (100 - rate * 100) + '%';
+    let msg;
+    if (sim.a === 'nao') msg = '<b>Hoje só o Grupo A pode migrar.</b> Ainda assim, revisamos sua fatura em busca de ajustes tarifários e de eficiência. Envie a conta e verificamos.';
+    else if (sim.m === 'sim') msg = '<b>Já está no Mercado Livre?</b> Uma gestão independente costuma encontrar economia adicional em contratos, swap de fonte, RETUSD e demanda. Aqui usamos uma referência conservadora de 15%.';
+    else if (sim.d === 'alta') msg = '<b>Caminho: consumidor livre.</b> Sua empresa pode contratar energia convencional ou incentivada e se torna agente da CCEE, com taxa única de adesão de R$ 7.934.';
+    else msg = '<b>Caminho: consumidor varejista.</b> Você entra no Mercado Livre por meio de um comercializador varejista, sem adesão à CCEE. O Grugeen ajuda a escolher o fornecedor.';
+    if (sim.a === 'ns') msg = '<b>Não sabe seu grupo tarifário?</b> Ele aparece na fatura. Envie a conta e verificamos junto com a análise. ' + (sim.d === 'alta' ? 'Com 500 kW ou mais, você migraria como consumidor livre.' : 'Abaixo de 500 kW, o caminho é o varejista.');
+    $('#verdict').innerHTML = msg;
+    $('#yearOut').previousElementSibling.textContent = sim.m === 'sim' ? 'Economia adicional possível por ano' : 'Potencial de economia por ano';
+  }
+  bill.addEventListener('input', calc); calc();
+
+  /* ---------- fio que acende com a rolagem ---------- */
+  const wire = $('#wire');
+  function wireUpdate() {
+    if (!wire) return;
+    const r = wire.getBoundingClientRect();
+    const p = Math.min(1, Math.max(0, (innerHeight * .9 - r.top) / (innerHeight * .6)));
+    wire.style.setProperty('--wire', reduce ? 1 : p);
+  }
+  onScroll();
+
+  /* ---------- linha do tempo arrastável ---------- */
+  const tl = $('#tl');
+  let dragging = false, sx = 0, sl = 0, moved = 0;
+  tl.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; dragging = true; moved = 0; sx = e.clientX; sl = tl.scrollLeft; tl.classList.add('drag'); tl.setPointerCapture(e.pointerId); });
+  tl.addEventListener('pointermove', e => { if (!dragging) return; const dx = e.clientX - sx; moved = Math.abs(dx); tl.scrollLeft = sl - dx; });
+  const end = () => { dragging = false; tl.classList.remove('drag'); };
+  tl.addEventListener('pointerup', end); tl.addEventListener('pointercancel', end);
+  const stepW = () => (tl.querySelector('.tl-item')?.offsetWidth || 300);
+  $('#tlNext').onclick = () => tl.scrollBy({left: stepW() * 2, behavior: reduce ? 'auto' : 'smooth'});
+  $('#tlPrev').onclick = () => tl.scrollBy({left: -stepW() * 2, behavior: reduce ? 'auto' : 'smooth'});
+  tl.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { tl.scrollBy({left: stepW()}); e.preventDefault(); } if (e.key === 'ArrowLeft') { tl.scrollBy({left: -stepW()}); e.preventDefault(); } });
+
+  /* ---------- depoimentos ---------- */
+  const T = [
+    ['Ederson Girardi', 'Giracor Têxtil · sócio', 'A economia obtida junto ao Grugeen foi a maior que observamos, exatamente pelo ótimo serviço prestado sem conflito de interesses, por não venderem energia e terem comprometimento na entrega. Para nós, o diferencial deles é o rápido atendimento e atenção aos detalhes dos custos de energia.'],
+    ['Thyago Alves', 'Flex Industries · assistente de diretoria', 'O Grugeen nos auxilia em tudo que envolve energia, desde a ampliação do parque fabril até a contratação de energia e a redução de emissões. Além de uma redução de custos acima da média, em 2023 zeramos nossas emissões no escopo 2 com certificados I-REC.'],
+    ['Jeferson Durante', 'MM da Amazônia · coordenador de manutenção', 'Já estávamos no Mercado Livre de energia e, depois que trocamos para a consultoria Grugeen, tivemos uma redução de custo surpreendente. A parceria vai além do Mercado Livre e nos apoia em todos os processos que envolvem energia elétrica.'],
+    ['Ederson Assini', 'Fiação e Tinturaria Irmãos Assini · sócio', 'Para nós, o diferencial do Grugeen é o rápido feedback e a atenção aos detalhes, com atendimento próximo. O serviço inclui acompanhamento de demanda, energia reativa e auxílio em todas as tratativas junto à distribuidora e à CCEE.'],
+    ['Antonio Carlos', 'Mondial Eletrodomésticos · Grupo MK', 'Com a consultoria do Grugeen conseguimos melhorar nossa eficiência energética e reduzir a emissão de gases de efeito estufa, com a contratação de energia renovável que também reduz os custos de energia da Mondial.']
+  ];
+  const ini = n => n.split(' ').map(w => w[0]).slice(0, 2).join('');
+  const tabs = $('#tTabs'), quote = $('#tQuote');
+  const showT = (i, focus) => {
+    [...tabs.children].forEach((b, k) => { b.setAttribute('aria-selected', k === i); b.tabIndex = k === i ? 0 : -1; });
+    const q = T[i];
+    quote.innerHTML = `<div class="t-fade"><blockquote>${q[2]}</blockquote><figcaption><span class="avatar">${ini(q[0])}</span><span><b>${q[0]}</b><br>${q[1]}</span></figcaption></div>`;
+    if (focus) tabs.children[i].focus();
+  };
+  T.forEach((q, i) => {
+    const b = document.createElement('button'); b.setAttribute('role','tab'); b.id = 'tt' + i;
+    b.innerHTML = `<b>${q[1].split(' · ')[0]}</b><span>${q[0]}</span>`;
+    b.onclick = () => { showT(i); auto && clearInterval(auto); };
+    b.onkeydown = e => { if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); showT((i + 1) % T.length, true); } if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); showT((i + T.length - 1) % T.length, true); } };
+    tabs.appendChild(b);
+  });
+  let ti = 0; showT(0);
+  let auto = reduce ? 0 : setInterval(() => { ti = (ti + 1) % T.length; showT(ti); }, 7000);
+  tabs.addEventListener('pointerenter', () => { clearInterval(auto); auto = 0; });
+
+  /* ---------- equipe (mesma ordem da página Quem Somos) ---------- */
+  const team = [
+    ['Ana Palma', 'Analista de Backoffice', 'Mais de 15 anos na gestão de clientes do Mercado Livre e na conexão de usinas de geração distribuída.', 'ana'],
+    ['Clara Luna de Bem', 'Analista de Backoffice', 'Engenheira agrônoma com qualificação em análise de dados. Garante a consistência das análises de faturas.', 'clara'],
+    ['Amilton Coelho', 'Superintendente', 'Mais de 20 anos em eficiência energética, geração e cogeração. Mestre em Engenharia Elétrica e ex-professor da UFSC.', 'amilton'],
+    ['Georgea Gabriella Silva', 'Analista de Backoffice', 'Engenheira sanitarista e ambiental com foco em sustentabilidade. Une eficiência, renováveis e dados na gestão de energia.', 'georgea'],
+    ['Juliana Pontes', 'Analista de Backoffice', 'Administradora com especialização em controladoria e finanças. Há mais de 6 anos na gestão de custos dos clientes.', 'juliana'],
+    ['Leonardo Neves Rodrigues', 'Gerente de Contas e Backoffice', 'Engenheiro eletricista com MBA em Eficiência Energética. Mais de 15 anos reduzindo custos de energia.', 'leonardo'],
+    ['Lucas Coelho Yatsugafu', 'Gerente de RH e Financeiro', 'Graduado em Finanças pela Wingate University, Summa Cum Laude. Há mais de sete anos no Grugeen.', 'lucas'],
+    ['Rafael Antônio Coelho', 'Gerente de Novos Negócios e Geração', 'Engenheiro eletricista, mestre pela FURB e MBA pela FGV. Professor de Mercado de Energia na pós-graduação.', 'rafael'],
+    ['Rodrigo Giacomazzi', 'Gerente de Comercialização e MDL', 'Mais de 13 anos no setor elétrico, com eficiência energética e Mercado Livre para médias e grandes empresas.', 'rodrigo'],
+    ['Vinicius Mesquita', 'Analista de Backoffice', 'Engenheiro eletrônico pela UFSC. Atua com qualidade de energia e redução de custos dos clientes.', 'vinicius'],
+    ['Eduardo Rodrigues', 'Analista de Operações', 'Acompanha o dia a dia das operações e produz os conteúdos sobre o setor elétrico.', 'eduardo'],
+    ['Felipe Lessa', 'Analista de Backoffice', 'Engenheiro de produção, aplica melhoria contínua e métodos ágeis aos processos de backoffice.', 'felipe'],
+    ['João Fiabani', 'Analista de Processos', 'Desenvolve automações e integrações de dados que dão mais precisão aos relatórios.', 'joao']
+  ];
+  $('#team').innerHTML = team.map(p => `<article class="person tilt rv"><div class="ph"><img src="team/${p[3]}.jpg" alt="Foto de ${p[0]}" loading="lazy" width="560" height="560"></div><div class="txt"><span class="role">${p[1]}</span><h3>${p[0]}</h3><p>${p[2]}</p></div></article>`).join('');
+  $$('#equipe .tilt').forEach(c => {
+    c.addEventListener('pointermove', e => { if (!fine || reduce) return; const r = c.getBoundingClientRect(); c.style.transform = `perspective(900px) rotateX(${((e.clientY - r.top) / r.height - .5) * -6}deg) rotateY(${((e.clientX - r.left) / r.width - .5) * 6}deg)`; });
+    c.addEventListener('pointerleave', () => { c.style.transform = ''; });
+  });
+
+  /* ---------- FAQ ---------- */
+  const F = [
+    ['O que é o Mercado Livre de Energia?', '<p>É o ambiente em que empresas negociam a compra de energia diretamente com geradores e comercializadoras, sem as tarifas fixadas pela distribuidora. Preço, volume e prazo são acordados entre as partes.</p>'],
+    ['Quem pode participar?', '<p>Consumidores atendidos em alta tensão (Grupo A). Eles se dividem em dois perfis:</p><ul><li><b>Consumidores livres:</b> uma unidade ou conjunto de unidades com demanda acima de 500 kW. Podem contratar energia convencional ou incentivada.</li><li><b>Consumidores varejistas:</b> unidades abaixo de 500 kW, que participam por meio de um comercializador varejista.</li></ul>'],
+    ['Quais são as vantagens?', '<ul><li>Economia de até 40% nos custos de energia</li><li>Flexibilidade para negociar preço, volume e prazo</li><li>Previsibilidade, com contratos que fixam o preço por anos</li><li>Escolha da fonte, incluindo energia renovável</li></ul>'],
+    ['Como é o processo de migração?', '<p>Primeiro, o estudo de viabilidade e a verificação da data de migração no contrato com a distribuidora (CCER). A distribuidora deve ser avisada com 180 dias de antecedência sobre a não renovação.</p><p>Depois vêm as adequações no sistema de medição e faturamento (SMF) e, para consumidores livres, a adesão à CCEE e a abertura de conta na agência indicada para as liquidações. Consumidores varejistas não passam por essa etapa.</p>'],
+    ['Quanto custa migrar?', '<p>Consumidores livres pagam uma taxa única de adesão à CCEE de R$ 7.934, além de uma possível adequação da medição, que em geral se paga em menos de 3 meses de economia. Consumidores varejistas não precisam aderir à CCEE.</p>'],
+    ['Posso ficar sem energia no Mercado Livre?', '<p>Não por causa da migração. A distribuidora local continua responsável pela entrega da energia, então o risco de interrupção é o mesmo do mercado cativo.</p>'],
+    ['Para quem eu pago a energia?', '<p>Você passa a receber duas faturas: uma da distribuidora, pelo uso da rede, e outra do novo fornecedor, pela energia consumida.</p>'],
+    ['O que é a CCEE?', '<p>A Câmara de Comercialização de Energia Elétrica é a instituição sem fins lucrativos que registra e liquida as operações de compra e venda de energia no país.</p>']
+  ];
+  const plus = '<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg>';
+  $('#faq').innerHTML = F.map((f, i) => `<details${i === 0 ? ' open' : ''}><summary>${f[0]}<span class="pm">${plus}</span></summary><div class="ans">${f[1]}</div></details>`).join('');
+
+  /* ---------- formulários (protótipo) ---------- */
+  $('#nlForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const em = $('#nlEmail'), m = $('#nlMsg');
+    m.hidden = false;
+    m.textContent = em.checkValidity() && em.value ? 'Inscrição registrada nesta prévia. No site publicado, o boletim chega em ' + em.value + '.' : 'Digite um e-mail válido, como nome@empresa.com.br.';
+  });
+  $('#leadForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const ok = $('#formOk'), req = ['#fNome', '#fEmp', '#fMail'].map($).filter(i => !i.checkValidity() || !i.value);
+    ok.hidden = false;
+    if (req.length) { ok.innerHTML = '<b>Faltam campos:</b> preencha nome, empresa e um e-mail válido.'; req[0].focus(); return; }
+    ok.innerHTML = '<b>Pronto, ' + $('#fNome').value.split(' ')[0] + '.</b> Nesta prévia o envio é simulado. No site publicado, a equipe Grugeen recebe sua fatura e retorna com a análise.';
+  });
+
+  /* ---------- copiar contato ---------- */
+  $$('.copy').forEach(b => b.addEventListener('click', () => {
+    const el = document.getElementById(b.dataset.copy), txt = el.textContent;
+    const done = () => { b.textContent = 'Copiado'; setTimeout(() => b.textContent = 'Copiar', 1600); };
+    const sel = () => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selecionado'; setTimeout(() => b.textContent = 'Copiar', 1600); };
+    try { navigator.clipboard.writeText(txt).then(done, sel); } catch { sel(); }
+  }));
+
+  /* ---------- duplicar marquee para loop contínuo ---------- */
+  const track = $('#track'); track.innerHTML += track.innerHTML;
+  [...track.children].slice(track.children.length / 2).forEach(s => s.setAttribute('aria-hidden', 'true'));
+})();
+</script>
+
+</body>
+</html>
